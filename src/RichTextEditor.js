@@ -52,21 +52,21 @@ export default class RichTextEditor extends Component {
   }
 
   componentWillMount() {
-    if(PlatformIOS) {
-      this.keyboardEventListeners = [
-        Keyboard.addListener('keyboardWillShow', this._onKeyboardWillShow),
-        Keyboard.addListener('keyboardWillHide', this._onKeyboardWillHide)
-      ];
-    } else {
-      this.keyboardEventListeners = [
-        Keyboard.addListener('keyboardDidShow', this._onKeyboardWillShow),
-        Keyboard.addListener('keyboardDidHide', this._onKeyboardWillHide)
-      ];
-    }
+    // if(PlatformIOS) {
+    //   this.keyboardEventListeners = [
+    //     Keyboard.addListener('keyboardWillShow', this._onKeyboardWillShow),
+    //     Keyboard.addListener('keyboardWillHide', this._onKeyboardWillHide)
+    //   ];
+    // } else {
+    //   this.keyboardEventListeners = [
+    //     Keyboard.addListener('keyboardDidShow', this._onKeyboardWillShow),
+    //     Keyboard.addListener('keyboardDidHide', this._onKeyboardWillHide)
+    //   ];
+    // }
   }
 
   componentWillUnmount() {
-    this.keyboardEventListeners.forEach((eventListener) => eventListener.remove());
+    // this.keyboardEventListeners.forEach((eventListener) => eventListener.remove());
   }
 
   _onKeyboardWillShow(event) {
